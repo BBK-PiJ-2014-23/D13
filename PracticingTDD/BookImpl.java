@@ -19,13 +19,13 @@ public class BookImpl implements Book
      * 
      */
     public String getAuthor() {
-        return "fail";
+        return author;
     }
     
     /**
      * 
      */
     public String getTitle() {
-        return "fail";
+        return title;
     }
 }
