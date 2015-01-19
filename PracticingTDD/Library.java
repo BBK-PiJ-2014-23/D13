@@ -16,4 +16,9 @@ public interface Library
      * 
      */
     int getMaxBooksPerUser();
+   
+    /**
+     * 
+     */
+    int getId(String personName);
 }
