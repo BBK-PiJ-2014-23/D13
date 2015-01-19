@@ -7,31 +7,34 @@
  */
 public class UserImpl implements User
 {
+    String name;
+    int id;
+    
     /**
      * 
      */
     public UserImpl(String name){
-        
+        this.name = name;
     }
     
     /**
      * 
      */
     public String getName() {
-        return "fail";
+        return name;
     }
     
     /**
      * 
      */
-    public int setId(int ID) {
-        return -1;
+    public int setId(int id) {
+        return this.id = id;
     }
     
     /**
      * 
      */
     public int getId() {
-        return -1;
+        return id;
     }
 }
