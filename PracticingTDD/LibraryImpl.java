@@ -1,3 +1,4 @@
+import java.util.*;
 
 /**
  * Write a description of class Library here.
@@ -9,12 +10,16 @@ public class LibraryImpl implements Library
 {
     private String name;
     private int maxBooksAtOnce;
+    private Map<Integer, String> users;
+    private int lastUserId;
     
     /**
      * 
      */
     public LibraryImpl(String name) {
         this.name = name;
+        this.users = new HashMap<Integer, String>();
+        this.lastUserId = 0;
     }
     
     /**
@@ -32,6 +37,11 @@ public class LibraryImpl implements Library
     }
     
     public int getId(String personName) {
-        return -1;
+        if (users.containsValue(personName)) {
+            return users.get(personName);
+        } else {
+            user.put(lastUserId + 1, personName);
+            return users.get(personName);
+        }
     }
 }
