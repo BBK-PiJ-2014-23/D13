@@ -29,17 +29,6 @@ public class BookTester
     }
 
     /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-        b = null;
-    }
-
-    /**
      * Checks if author and title are returned correctly.
      */
     @Test
