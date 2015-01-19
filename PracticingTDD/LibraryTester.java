@@ -25,16 +25,6 @@ public class LibraryTester
     {
         lib = new LibraryImpl("Birkbeck");
     }
-
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-    }
     
     /**
      * 
@@ -43,5 +33,16 @@ public class LibraryTester
     public void checkMaxBooks() {
         assertEquals(lib.setMaxBooksPerUser(6), 6);
         assertEquals(lib.getMaxBooksPerUser(), 6);
+    }
+    
+    /**
+     * 
+     */
+    @Test
+    public void getUserId() {
+        assertEquals(lib.getId("Mayer"), 1);
+        assertEquals(lib.getId("Mayer"), 1);
+        assertEquals(lib.getId("Miller"), 2);
+        assertEquals(lib.getId("Miller"), 2);
     }
 }
