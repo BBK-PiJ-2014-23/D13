@@ -23,7 +23,7 @@ public class UserTester
     @Before
     public void setUp()
     {
-        User u = new UserImpl("Mayer");
+        u = new UserImpl("Mayer");
     }
 
     /**
