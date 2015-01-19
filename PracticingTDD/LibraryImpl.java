@@ -14,20 +14,20 @@ public class LibraryImpl implements Library
      * 
      */
     public LibraryImpl(String name) {
-
+        this.name = name;
     }
     
     /**
      * 
      */
     public int setMaxBooksPerUser(int max) {
-        return -1;
+        return maxBooksAtOnce = max;
     }
     
     /**
      * 
      */
     public int getMaxBooksPerUser() {
-        return -1;
+        return maxBooksAtOnce;
     }
 }
