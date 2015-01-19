@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -13,8 +12,8 @@ import org.junit.Test;
  */
 public class UserTester
 {
-    User u;
-    
+    public User u;
+
     /**
      * Sets up the test fixture.
      *
@@ -35,7 +34,7 @@ public class UserTester
     public void tearDown()
     {
     }
-    
+
     /**
      * 
      */
@@ -44,20 +43,21 @@ public class UserTester
         assertEquals(u.getName(), "Mayer");
         assertEquals(u.getId(), 0);
     }
-    
+
     /**
      * 
      */
     @Test
-    public void setID() {
+    public void setId() {
         assertEquals(u.setId(99), 99);
     }
-    
+
     /**
      * 
      */
     @Test
     public void getRealID() {
+        u.setId(99);
         assertEquals(u.getId(), 99);
     }
 }
