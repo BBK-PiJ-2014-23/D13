@@ -12,7 +12,7 @@ import org.junit.Test;
  */
 public class UserTester
 {
-    public User u;
+    private User u;
 
     /**
      * Sets up the test fixture.
@@ -26,38 +26,20 @@ public class UserTester
     }
 
     /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @After
-    public void tearDown()
-    {
-    }
-
-    /**
      * 
      */
     @Test
-    public void getNameAndPlaceholderID() {
+    public void checkName() {
         assertEquals(u.getName(), "Mayer");
+    }
+
+    /**
+     * 
+     */
+    @Test
+    public void checkID() {
         assertEquals(u.getId(), 0);
-    }
-
-    /**
-     * 
-     */
-    @Test
-    public void setId() {
         assertEquals(u.setId(99), 99);
-    }
-
-    /**
-     * 
-     */
-    @Test
-    public void getRealID() {
-        u.setId(99);
         assertEquals(u.getId(), 99);
     }
 }
