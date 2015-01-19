@@ -42,7 +42,7 @@ public class UserTester
     @Test
     public void getNameAndPlaceholderID() {
         assertEquals(u.getName(), "Mayer");
-        assertEquals(u.getID(), 0);
+        assertEquals(u.getId(), 0);
     }
     
     /**
@@ -50,7 +50,7 @@ public class UserTester
      */
     @Test
     public void setID() {
-        assertEquals(u.setID(99), 99);
+        assertEquals(u.setId(99), 99);
     }
     
     /**
@@ -58,6 +58,6 @@ public class UserTester
      */
     @Test
     public void getRealID() {
-        assertEquals(u.getID(), 99);
+        assertEquals(u.getId(), 99);
     }
 }

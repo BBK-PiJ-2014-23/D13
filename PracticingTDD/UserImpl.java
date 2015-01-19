@@ -24,14 +24,14 @@ public class UserImpl implements User
     /**
      * 
      */
-    public int setID(int ID) {
+    public int setId(int ID) {
         return -1;
     }
     
     /**
      * 
      */
-    public int getID() {
+    public int getId() {
         return -1;
     }
 }

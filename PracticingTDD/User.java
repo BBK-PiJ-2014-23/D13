@@ -15,10 +15,10 @@ public interface User
     /**
      * 
      */
-    int setID(int ID);
+    int setId(int ID);
     
     /**
      * 
      */
-    int getID();
+    int getId();
 }
