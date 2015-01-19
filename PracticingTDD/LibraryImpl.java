@@ -30,4 +30,8 @@ public class LibraryImpl implements Library
     public int getMaxBooksPerUser() {
         return maxBooksAtOnce;
     }
+    
+    public int getId(String personName) {
+        return -1;
+    }
 }
