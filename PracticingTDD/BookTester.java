@@ -12,6 +12,9 @@ import org.junit.Test;
  */
 public class BookTester
 {
+    /**
+     * Book test object.
+     */
     Book b;
 
     /**
@@ -37,7 +40,7 @@ public class BookTester
     }
 
     /**
-     * 
+     * Checks if author and title are returned correctly.
      */
     @Test
     public void getAuthorTitle() {
