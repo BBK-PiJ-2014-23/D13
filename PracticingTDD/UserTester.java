@@ -13,6 +13,8 @@ import org.junit.Test;
 public class UserTester
 {
     private User u;
+    private User r;
+    private Library lib;
 
     /**
      * Sets up the test fixture.
@@ -23,6 +25,8 @@ public class UserTester
     public void setUp()
     {
         u = new UserImpl("Mayer");
+        r = new UserImpl("Miller");
+        
     }
 
     /**
@@ -39,7 +43,21 @@ public class UserTester
     @Test
     public void checkID() {
         assertEquals(u.getId(), 0);
-        assertEquals(u.setId(99), 99);
+        u.setId(99);
         assertEquals(u.getId(), 99);
+    }
+    
+    /**
+     * 
+     */
+    @Test
+    public void registerLibrary() {
+        Library lib = new LibraryImpl("Birkbeck");
+        u.register(lib);
+        assertEquals(u.getLibrary(), lib);
+        assertEquals(u.getId(), 0);
+        r.register(lib);
+        assertEquals(r.getLibrary(), lib);
+        assertEquals(r.getId(), 1);
     }
 }
