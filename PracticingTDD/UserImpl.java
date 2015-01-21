@@ -7,34 +7,50 @@
  */
 public class UserImpl implements User
 {
-    String name;
-    int id;
-    
+    private String name;
+    private int id;
+    private Library lib;
+
     /**
      * 
      */
     public UserImpl(String name){
         this.name = name;
     }
-    
+
     /**
      * 
      */
     public String getName() {
         return name;
     }
-    
+
     /**
      * 
      */
-    public int setId(int id) {
-        return this.id = id;
+    public void setId(int id) {
+        this.id = id;
     }
-    
+
     /**
      * 
      */
     public int getId() {
         return id;
+    }
+
+    /**
+     * 
+     */
+    public void register(Library lib) {
+        this.lib = lib;
+        setId(lib.getId(name));
+    }
+
+    /**
+     * 
+     */
+    public Library getLibrary() {
+        return lib;
     }
 }
