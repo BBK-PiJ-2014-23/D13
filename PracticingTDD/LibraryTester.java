@@ -13,7 +13,7 @@ import org.junit.Test;
  */
 public class LibraryTester
 {
-    Library lib;
+    private Library lib;
     
     /**
      * Sets up the test fixture.
@@ -40,9 +40,9 @@ public class LibraryTester
      */
     @Test
     public void getUserId() {
-        assertEquals(lib.getId("Mayer"), 1);
-        assertEquals(lib.getId("Mayer"), 1);
-        assertEquals(lib.getId("Miller"), 2);
-        assertEquals(lib.getId("Miller"), 2);
+        assertEquals(lib.getId("Mayer"), 0);
+        assertEquals(lib.getId("Mayer"), 0);
+        assertEquals(lib.getId("Miller"), 1);
+        assertEquals(lib.getId("Miller"), 1);
     }
 }
