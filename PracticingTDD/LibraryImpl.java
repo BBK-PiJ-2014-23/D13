@@ -23,8 +23,8 @@ public class LibraryImpl implements Library
     /**
      * 
      */
-    public int setMaxBooksPerUser(int max) {
-        return maxBooksAtOnce = max;
+    public void setMaxBooksPerUser(int max) {
+        maxBooksAtOnce = max;
     }
 
     /**

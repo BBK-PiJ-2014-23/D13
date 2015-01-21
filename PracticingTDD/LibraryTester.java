@@ -31,7 +31,7 @@ public class LibraryTester
      */
     @Test
     public void checkMaxBooks() {
-        assertEquals(lib.setMaxBooksPerUser(6), 6);
+        lib.setMaxBooksPerUser(6);
         assertEquals(lib.getMaxBooksPerUser(), 6);
     }
     

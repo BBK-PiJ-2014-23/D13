@@ -10,7 +10,7 @@ public interface Library
     /**
      * 
      */
-    int setMaxBooksPerUser(int max);
+    void setMaxBooksPerUser(int max);
     
     /**
      * 
