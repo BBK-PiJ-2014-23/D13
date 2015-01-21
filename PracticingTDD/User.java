@@ -15,10 +15,20 @@ public interface User
     /**
      * 
      */
-    int setId(int ID);
+    void setId(int ID);
     
     /**
      * 
      */
     int getId();
+    
+    /**
+     * 
+     */
+    void register(Library lib);
+    
+    /**
+     * 
+     */
+    Library getLibrary();
 }
