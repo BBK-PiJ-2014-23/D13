@@ -10,23 +10,23 @@ public class LibraryImpl implements Library
 {
     private final String name;
     private int maxBooksAtOnce;
-    private List<String> users;
+    private List<User> users;
 
     /**
      * 
      */
     public LibraryImpl(String name) {
         this.name = name;
-        this.users = new ArrayList<String>();
+        this.users = new ArrayList<User>();
     }
-    
+
     /**
      * 
      */
     public String getName() {
         return name;
     }
-    
+
     /**
      * 
      */
@@ -42,11 +42,18 @@ public class LibraryImpl implements Library
     }
 
     public int getId(String personName) {
-        if (users.contains(personName)) {
-            return users.indexOf(personName);
-        } else {
-            users.add(personName);
-            return users.indexOf(personName);
+        boolean found = false;
+        int i = 0;  
+        while (i < users.size() && !found) {
+            if (users.get(i).getName().equals(personName)) {
+                found = true;
+            } else {
+                i++;
+            }
         }
+        if (!found) {
+            users.add(new UserImpl(personName));
+        }
+        return i;
     }
 }
