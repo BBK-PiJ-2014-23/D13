@@ -1,5 +1,4 @@
 
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -14,7 +13,7 @@ import org.junit.Test;
 public class LibraryTester
 {
     private Library lib;
-    
+
     /**
      * Sets up the test fixture.
      *
@@ -25,7 +24,7 @@ public class LibraryTester
     {
         lib = new LibraryImpl("Birkbeck");
     }
-    
+
     /**
      * 
      */
@@ -34,7 +33,7 @@ public class LibraryTester
         lib.setMaxBooksPerUser(6);
         assertEquals(lib.getMaxBooksPerUser(), 6);
     }
-    
+
     /**
      * 
      */
@@ -44,5 +43,14 @@ public class LibraryTester
         assertEquals(lib.getId("Mayer"), 0);
         assertEquals(lib.getId("Miller"), 1);
         assertEquals(lib.getId("Miller"), 1);
+    }
+
+    /**
+     * 
+     */
+    @Test
+    public void addBook() {
+        lib.addBook("Java is awesome", "Mayer");
+        assertEquals(books.get(0).getTitle(), "Java is awesome");
     }
 }
