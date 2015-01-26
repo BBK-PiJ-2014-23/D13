@@ -18,4 +18,14 @@ public interface Book
      * @return the book's title
      */
     String getTitle();
+    
+    /**
+     * 
+     */
+    boolean isTaken();
+    
+    /**
+     * 
+     */
+    void setTaken();
 }
