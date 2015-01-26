@@ -51,6 +51,8 @@ public class LibraryTester
     @Test
     public void addBook() {
         lib.addBook("Java is awesome", "Mayer");
-        assertEquals(books.get(0).getTitle(), "Java is awesome");
+        lib.addBook("Programming rocks", "Miller");
+        assertEquals(lib.getCollection().get(0).getTitle(), "Java is awesome");
+        assertEquals(lib.getCollection().get(1).getTitle(), "Programming rocks");
     }
 }
