@@ -3,12 +3,12 @@
  * Implementation of interface book containing author and title.
  * 
  * @author Stefan E. Mayer
- * @version 1.0
+ * @version 1.1
  */
 public class BookImpl implements Book
 {
-    final String author;
-    final String title;
+    private final String author;
+    private final String title;
     
     /**
      * Constructor for a book object.
