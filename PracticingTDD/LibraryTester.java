@@ -55,4 +55,13 @@ public class LibraryTester
         assertEquals(lib.getCollection().get(0).getTitle(), "Java is awesome");
         assertEquals(lib.getCollection().get(1).getTitle(), "Programming rocks");
     }
+    
+    /**
+     * 
+     */
+    @Test void takeBook() {
+        lib.addBook("Programming rocks", "Miller");
+        assertEquals(lib.takeBook("Programming rocks"), lib.getCollection().get(0));
+        assertNull(lib.takeBook("Programming rocks"));
+    }
 }
