@@ -12,12 +12,12 @@ public interface Library
      * 
      */
     String getName();
-    
+
     /**
      * 
      */
     List<Book> getCollection();
-    
+
     /**
      * 
      */
@@ -38,10 +38,10 @@ public interface Library
      */
     void addBook(String title, String author);
 
-    //     /**
-    //      * 
-    //      */
-    //     Book takeBook(String title);
+    /**
+     * 
+     */
+    Book takeBook(String title);
     //     
     //     /**
     //      * 
