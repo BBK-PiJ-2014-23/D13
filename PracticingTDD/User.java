@@ -30,5 +30,5 @@ public interface User
     /**
      * 
      */
-    Library getLibrary();
+    String getLibrary();
 }

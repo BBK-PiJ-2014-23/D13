@@ -7,7 +7,7 @@
  */
 public class UserImpl implements User
 {
-    private String name;
+    private final String name;
     private int id;
     private Library lib;
 
@@ -50,7 +50,7 @@ public class UserImpl implements User
     /**
      * 
      */
-    public Library getLibrary() {
-        return lib;
+    public String getLibrary() {
+        return lib.getName();
     }
 }
