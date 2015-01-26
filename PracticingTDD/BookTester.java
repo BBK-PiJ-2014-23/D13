@@ -42,7 +42,7 @@ public class BookTester
     @Test
     public void checkAvailability() {
         assertFalse(b.isTaken());
-        b.setTaken();
+        b.setTaken(true);
         assertTrue(b.isTaken());
     }
 }
