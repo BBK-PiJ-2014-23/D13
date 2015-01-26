@@ -10,6 +10,11 @@ public interface Library
     /**
      * 
      */
+    String getName();
+    
+    /**
+     * 
+     */
     void setMaxBooksPerUser(int max);
     
     /**
@@ -21,4 +26,19 @@ public interface Library
      * 
      */
     int getId(String personName);
+    
+//     /**
+//      * 
+//      */
+//     void addBook(String title, String author);
+    
+//     /**
+//      * 
+//      */
+//     Book takeBook(String title);
+//     
+//     /**
+//      * 
+//      */
+//     void returnBook(Book book);
 }
