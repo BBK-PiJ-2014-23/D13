@@ -46,7 +46,7 @@ public class BookImpl implements Book
     /**
      * 
      */
-    public void setTaken() {
+    public void setTaken(boolean taken) {
         
     }
 }
