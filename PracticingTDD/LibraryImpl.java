@@ -19,6 +19,7 @@ public class LibraryImpl implements Library
     public LibraryImpl(String name) {
         this.name = name;
         this.users = new ArrayList<User>();
+        this.books = new ArrayList<Book>();
     }
 
     /**
@@ -27,7 +28,14 @@ public class LibraryImpl implements Library
     public String getName() {
         return name;
     }
-
+    
+    /**
+     * 
+     */
+    public List<Book> getCollection() {
+        return books;
+    }
+    
     /**
      * 
      */
@@ -59,6 +67,6 @@ public class LibraryImpl implements Library
     }
 
     public void addBook(String title, String author) {
-
+        books.add(new BookImpl(author, title));
     }
 }
