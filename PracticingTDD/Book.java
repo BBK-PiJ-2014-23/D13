@@ -27,5 +27,5 @@ public interface Book
     /**
      * 
      */
-    void setTaken();
+    void setTaken(boolean taken);
 }
