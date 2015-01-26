@@ -49,7 +49,10 @@ public class LibraryImpl implements Library
     public int getMaxBooksPerUser() {
         return maxBooksAtOnce;
     }
-
+    
+    /**
+     * 
+     */
     public int getId(String personName) {
         boolean found = false;
         int i = 0;  
@@ -65,8 +68,18 @@ public class LibraryImpl implements Library
         }
         return i;
     }
-
+    
+    /**
+     * 
+     */
     public void addBook(String title, String author) {
         books.add(new BookImpl(author, title));
+    }
+    
+    /**
+     * 
+     */
+    public Book takeBook(String title) {
+        return new BookImpl("test", "test");
     }
 }
