@@ -19,7 +19,14 @@ public class LibraryImpl implements Library
         this.name = name;
         this.users = new ArrayList<String>();
     }
-
+    
+    /**
+     * 
+     */
+    public String getName() {
+        return name;
+    }
+    
     /**
      * 
      */
