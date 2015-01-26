@@ -36,4 +36,13 @@ public class BookTester
         assertEquals(b.getAuthor(), "Mayer");
         assertEquals(b.getTitle(), "Java Rocks");
     }
+    /**
+     * 
+     */
+    @Test
+    public void checkAvailability() {
+        assertFalse(b.isTaken());
+        b.setTaken();
+        assertTrue(b.isTaken());
+    }
 }
