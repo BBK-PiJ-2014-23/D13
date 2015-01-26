@@ -11,6 +11,7 @@ public class LibraryImpl implements Library
     private final String name;
     private int maxBooksAtOnce;
     private List<User> users;
+    private List<Book> books;
 
     /**
      * 
@@ -55,5 +56,9 @@ public class LibraryImpl implements Library
             users.add(new UserImpl(personName));
         }
         return i;
+    }
+
+    public void addBook(String title, String author) {
+
     }
 }
