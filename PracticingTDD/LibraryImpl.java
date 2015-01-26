@@ -28,14 +28,14 @@ public class LibraryImpl implements Library
     public String getName() {
         return name;
     }
-    
+
     /**
      * 
      */
     public List<Book> getCollection() {
         return books;
     }
-    
+
     /**
      * 
      */
@@ -49,7 +49,7 @@ public class LibraryImpl implements Library
     public int getMaxBooksPerUser() {
         return maxBooksAtOnce;
     }
-    
+
     /**
      * 
      */
@@ -68,18 +68,32 @@ public class LibraryImpl implements Library
         }
         return i;
     }
-    
+
     /**
      * 
      */
     public void addBook(String title, String author) {
         books.add(new BookImpl(author, title));
     }
-    
+
     /**
      * 
      */
     public Book takeBook(String title) {
-        return new BookImpl("test", "test");
+        boolean found = false;
+        int i = 0;  
+        while (i < books.size() && !found) {
+            if (books.get(i).getTitle().equals(title)) {
+                found = true;
+            } else {
+                i++;
+            }
+        }
+        if (found && books.get(i).isTaken() == false) {
+            books.get(i).setTaken(true);
+            return books.get(i);
+        } else {
+            return null;
+        }
     }
 }
