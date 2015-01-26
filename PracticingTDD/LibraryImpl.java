@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class LibraryImpl implements Library
 {
-    private String name;
+    private final String name;
     private int maxBooksAtOnce;
     private List<String> users;
 
