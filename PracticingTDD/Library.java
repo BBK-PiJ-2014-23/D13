@@ -1,3 +1,4 @@
+import java.util.*;
 
 /**
  * Write a description of interface Library here.
@@ -15,30 +16,35 @@ public interface Library
     /**
      * 
      */
-    void setMaxBooksPerUser(int max);
+    List<Book> getCollection();
     
+    /**
+     * 
+     */
+    void setMaxBooksPerUser(int max);
+
     /**
      * 
      */
     int getMaxBooksPerUser();
-   
+
     /**
      * 
      */
     int getId(String personName);
-    
-//     /**
-//      * 
-//      */
-//     void addBook(String title, String author);
-    
-//     /**
-//      * 
-//      */
-//     Book takeBook(String title);
-//     
-//     /**
-//      * 
-//      */
-//     void returnBook(Book book);
+
+    /**
+     * 
+     */
+    void addBook(String title, String author);
+
+    //     /**
+    //      * 
+    //      */
+    //     Book takeBook(String title);
+    //     
+    //     /**
+    //      * 
+    //      */
+    //     void returnBook(Book book);
 }
