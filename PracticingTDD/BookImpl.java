@@ -9,7 +9,7 @@ public class BookImpl implements Book
 {
     private final String author;
     private final String title;
-    private boolean taken;
+    private boolean isTaken;
     
     /**
      * Constructor for a book object.
@@ -17,7 +17,7 @@ public class BookImpl implements Book
     public BookImpl(String author, String title) {
         this.author = author;
         this.title = title;
-        taken = false;
+        isTaken = false;
     }
     
     /**
@@ -40,13 +40,13 @@ public class BookImpl implements Book
      * 
      */
     public boolean isTaken() {
-        return true;
+        return isTaken;
     }
     
     /**
      * 
      */
-    public void setTaken(boolean taken) {
-        
+    public void setTaken(boolean isTaken) {
+        this.isTaken = isTaken;
     }
 }
