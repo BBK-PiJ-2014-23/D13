@@ -11,6 +11,7 @@ public class UserImpl implements User
     private final String name;
     private int id;
     private Library lib;
+    private List<String> onLoan;
 
     /**
      * 
@@ -46,6 +47,7 @@ public class UserImpl implements User
     public void register(Library lib) {
         this.lib = lib;
         setId(lib.getId(name));
+        onLoan = new ArrayList<String>();
     }
 
     /**
@@ -59,13 +61,16 @@ public class UserImpl implements User
      * 
      */
     public void borrowBook(String title) {
-        
+        Book b = lib.takeBook(title);
+        if (b != null) {
+            onLoan.add(b.getTitle());
+        }
     }
     
     /**
      * 
      */
     public List<String> getBooksBorrowed() {
-        return new ArrayList<String>();
+        return onLoan;
     }
 }
