@@ -42,9 +42,9 @@ public interface Library
      * 
      */
     Book takeBook(String title);
-    //     
-    //     /**
-    //      * 
-    //      */
-    //     void returnBook(Book book);
+    
+    /**
+     * 
+     */
+    void returnBook(Book book);
 }
