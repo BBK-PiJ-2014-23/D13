@@ -96,7 +96,7 @@ public class LibraryImpl implements Library
             return null;
         }
     }
-    
+
     /**
      * 
      */
@@ -104,18 +104,25 @@ public class LibraryImpl implements Library
         int i = books.indexOf(book);
         books.get(i).setTaken(false);
     }
-    
+
     /**
      * 
      */
     public int getReaderCount() {
         return users.size();
     }
-    
+
     /**
      * 
      */
     public int getBookCount() {
         return books.size();
+    }
+
+    /**
+     * 
+     */
+    public int getBookBorrowedCount() {
+        return -1;
     }
 }
