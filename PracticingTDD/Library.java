@@ -57,4 +57,9 @@ public interface Library
      * 
      */
     int getBookCount();
+    
+    /**
+     * 
+     */
+    int getBookBorrowedCount();
 }
