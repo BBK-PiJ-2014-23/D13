@@ -60,4 +60,19 @@ public class UserTester
         assertEquals(r.getLibrary(), "Birkbeck");
         assertEquals(r.getId(), 1);
     }
+    
+    /**
+     * 
+     */
+    @Test
+    public void getBooksBorrowed() {
+        Library lib = new LibraryImpl("Birkbeck");
+        u.register(lib);
+        lib.addBook("Java is awesome", "Mayer");
+        lib.addBook("Programming rocks", "Miller");
+        assertEquals(u.getBooksBorrowed().toString(), "[]");
+        u.borrowBook("Java is awesome");
+        u.borrowBook("Programming rocks");
+        assertEquals(u.getBooksBorrowed().toString(), "[Java is awesome, Programming rocks, ]");
+    }
 }
