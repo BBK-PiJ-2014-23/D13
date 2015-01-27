@@ -73,6 +73,6 @@ public class UserTester
         assertEquals(u.getBooksBorrowed().toString(), "[]");
         u.borrowBook("Java is awesome");
         u.borrowBook("Programming rocks");
-        assertEquals(u.getBooksBorrowed().toString(), "[Java is awesome, Programming rocks, ]");
+        assertEquals(u.getBooksBorrowed().toString(), "[Java is awesome, Programming rocks]");
     }
 }
