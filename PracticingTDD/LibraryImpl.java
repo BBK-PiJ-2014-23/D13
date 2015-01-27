@@ -109,13 +109,13 @@ public class LibraryImpl implements Library
      * 
      */
     public int getReaderCount() {
-        return -1;
+        return users.size();
     }
     
     /**
      * 
      */
     public int getBookCount() {
-        return -1;
+        return books.size();
     }
 }
