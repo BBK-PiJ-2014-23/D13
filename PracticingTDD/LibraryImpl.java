@@ -96,4 +96,11 @@ public class LibraryImpl implements Library
             return null;
         }
     }
+    
+    /**
+     * 
+     */
+    public void returnBook(Book book) {
+        
+    }
 }
