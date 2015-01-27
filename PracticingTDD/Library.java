@@ -47,4 +47,14 @@ public interface Library
      * 
      */
     void returnBook(Book book);
+    
+    /**
+     * 
+     */
+    int getReaderCount();
+    
+    /**
+     * 
+     */
+    int getBookCount();
 }
