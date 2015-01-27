@@ -101,6 +101,7 @@ public class LibraryImpl implements Library
      * 
      */
     public void returnBook(Book book) {
-        
+        int i = books.indexOf(book);
+        books.get(i).setTaken(false);
     }
 }
