@@ -1,3 +1,4 @@
+import java.util.*;
 
 /**
  * Write a description of interface User here.
@@ -31,4 +32,14 @@ public interface User
      * 
      */
     String getLibrary();
+    
+    /**
+     * 
+     */
+    void borrowBook(String title);
+    
+    /**
+     * 
+     */
+    List<String> getBooksBorrowed();
 }
