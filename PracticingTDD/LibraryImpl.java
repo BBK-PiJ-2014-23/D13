@@ -104,4 +104,18 @@ public class LibraryImpl implements Library
         int i = books.indexOf(book);
         books.get(i).setTaken(false);
     }
+    
+    /**
+     * 
+     */
+    public int getReaderCount() {
+        return -1;
+    }
+    
+    /**
+     * 
+     */
+    public int getBookCount() {
+        return -1;
+    }
 }
