@@ -76,4 +76,22 @@ public class LibraryTester
         lib.returnBook(lib.getCollection().get(0));
         assertFalse(lib.getCollection().get(0).isTaken());
     }
+    
+    /**
+     * 
+     */
+    @Test
+    public void getBookAndReaderCount() {
+        assertEquals(lib.getBookCount(), 0);
+        lib.addBook("Java is awesome", "Mayer");
+        lib.addBook("Programming rocks", "Miller");
+        assertEquals(lib.getBookCount(), 2);
+        
+        assertEquals(lib.getReaderCount(), 0);
+        User one = new UserImpl("Stefan");
+        User two = new UserImpl("Simon");
+        one.register(lib);
+        two.register(lib);
+        assertEquals(lib.getReaderCount(), 2);
+    }
 }
