@@ -1,3 +1,4 @@
+import java.util.*;
 
 /**
  * Write a description of class UserImpl here.
@@ -52,5 +53,19 @@ public class UserImpl implements User
      */
     public String getLibrary() {
         return lib.getName();
+    }
+    
+    /**
+     * 
+     */
+    public void borrowBook(String title) {
+        
+    }
+    
+    /**
+     * 
+     */
+    public List<String> getBooksBorrowed() {
+        return new ArrayList<String>();
     }
 }
