@@ -123,6 +123,12 @@ public class LibraryImpl implements Library
      * 
      */
     public int getBookBorrowedCount() {
-        return -1;
+        int count = 0;
+        for (int i = 0; i < books.size(); i++) {
+            if (books.get(i).isTaken()) {
+                count++;
+            }
+        }
+        return count;
     }
 }
