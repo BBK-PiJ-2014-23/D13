@@ -94,4 +94,16 @@ public class LibraryTester
         two.register(lib);
         assertEquals(lib.getReaderCount(), 2);
     }
+    
+    /**
+     * 
+     */
+    @Test
+    public void getBookBorrowedCount() {
+        assertEquals(lib.getBookBorrowedCount(), 0);
+        lib.addBook("Java is awesome", "Mayer");
+        lib.addBook("Programming rocks", "Miller");
+        lib.takeBook("Java is awesome");
+        assertEquals(lib.getBookBorrowedCount(), 1);
+    }
 }
