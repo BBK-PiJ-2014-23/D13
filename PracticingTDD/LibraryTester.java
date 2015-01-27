@@ -59,7 +59,8 @@ public class LibraryTester
     /**
      * 
      */
-    @Test void takeBook() {
+    @Test
+    public void takeBook() {
         lib.addBook("Programming rocks", "Miller");
         assertEquals(lib.takeBook("Programming rocks"), lib.getCollection().get(0));
         assertNull(lib.takeBook("Programming rocks"));
